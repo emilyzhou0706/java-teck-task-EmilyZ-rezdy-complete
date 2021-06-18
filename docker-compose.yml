@@ -1,0 +1,16 @@
+version: "3"
+services:
+  lunch-db:
+    image: mysql:5.7.17
+    container_name: lunch-db
+    ports:
+      - 3306:3306
+    volumes:
+      - mysqldata:/var/lib/lunch
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_ROOT_PASSWORD=rezdytechtask
+      - MYSQL_DATABASE=lunch
+volumes:
+  mysqldata:
+    external: false
