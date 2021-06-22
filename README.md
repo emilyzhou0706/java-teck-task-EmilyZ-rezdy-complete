@@ -38,13 +38,16 @@ http://localhost:8080/lunch/exclueIngre
 GIVEN that I am a consumer of the Lunch API AND have made a GET request to the /lunch
 endpoint with a given date THEN I should receive a JSON response of the recipes that I can
 prepare based on the availability of the ingredients in my fridge
+
 ● GIVEN that I am a consumer of the Lunch API AND I have made a GET request to the /lunch
 endpoint AND an ingredient is past its useBy date according to the date parameter THEN I
 should not receive any recipes containing this ingredient
+
 ● GIVEN that I am a consumer of the Lunch API AND I have made a GET request to the /lunch
 endpoint AND an ingredient is past its bestBefore date according to the date parameter
 AND is still within its useBy date THEN any recipe containing this ingredient should be sorted to
 the bottom of the JSON response object
+
 ● GIVEN that I am a consumer of the Lunch API, I want to look up a recipe by its title. Create a new
 REST endpoint to lookup recipe by title AND return HTTP 404 status if the requested receipt
 cannot be found.
