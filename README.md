@@ -35,6 +35,7 @@ http://localhost:8080/lunch/recipe?recipe=Salad
 http://localhost:8080/lunch/exclueIngre
 
 5.Technology design of the application
+
 GIVEN that I am a consumer of the Lunch API AND have made a GET request to the /lunch
 endpoint with a given date THEN I should receive a JSON response of the recipes that I can
 prepare based on the availability of the ingredients in my fridge
