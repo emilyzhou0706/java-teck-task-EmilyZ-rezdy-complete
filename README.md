@@ -27,11 +27,17 @@ docker exec $CONTAINER_ID /bin/sh -c 'mysql -u root -prezdytechtask lunch </lunc
 java -jar LunchApplication
 
 4.URL for application
-4.1 to get all recipes by date to with ingredients before use by date example
+
+4.1 
+to get all recipes by date to with ingredients before use by date example
 http://localhost:8080/lunch?date=2010-01-01
-4.2 to get a recipes by recipes name example
+
+4.2 
+to get a recipes by recipes name example
 http://localhost:8080/lunch/recipe?recipe=Salad
-4.3 to get recipes by excluding ingredients example
+
+4.3 
+to get recipes by excluding ingredients example
 http://localhost:8080/lunch/exclueIngre
 
 5.Technology design of the application
