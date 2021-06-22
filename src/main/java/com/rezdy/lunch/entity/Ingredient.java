@@ -1,11 +1,17 @@
-package com.rezdy.lunch.service;
+package com.rezdy.lunch.entity;
+
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.time.LocalDate;
+import java.util.Objects;
 
 @Entity
-public class Ingredient {
+@AllArgsConstructor
+@NoArgsConstructor
+public class    Ingredient {
 
     @Id
     private String title;
@@ -39,5 +45,18 @@ public class Ingredient {
     public Ingredient setUseBy(LocalDate useBy) {
         this.useBy = useBy;
         return this;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Ingredient that = (Ingredient) o;
+        return Objects.equals(title, that.title) && Objects.equals(bestBefore, that.bestBefore) && Objects.equals(useBy, that.useBy);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, bestBefore, useBy);
     }
 }

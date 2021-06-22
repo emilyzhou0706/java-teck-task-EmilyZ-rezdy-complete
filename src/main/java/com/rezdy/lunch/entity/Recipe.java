@@ -1,9 +1,16 @@
-package com.rezdy.lunch.service;
+package com.rezdy.lunch.entity;
+
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 public class Recipe {
 
     @Id
@@ -12,7 +19,7 @@ public class Recipe {
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name = "recipe_ingredient",
-            joinColumns = @JoinColumn(name = "title"),
+            joinColumns = @JoinColumn(name = "recipe"),
             inverseJoinColumns = @JoinColumn(name = "ingredient"))
     private Set<Ingredient> ingredients;
 
